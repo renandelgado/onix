@@ -1,4 +1,9 @@
-<?php get_header('home'); ?>
+<?php
+/*
+ * Template Name: Front Page Template
+ */
+ get_header('home'); 
+ ?>
 		<main>
 			<div class="container-fluid">
 				<?php 
@@ -8,4 +13,5 @@
 		     	?>
 			</div>
 		</main>
+
 <?php get_footer(); ?>

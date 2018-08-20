@@ -1,0 +1,24 @@
+@at-root {
+  @-ms-viewport { width: device-width; } // linha de desativação de estilo na regra, sem prefixo de fornecedor
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "mixins/functions";
+@import "mixins/grid-variables";
+@import "mixins/breakpoints";
+@import "mixins/grid-framework";
+@import "mixins/grid-parts";
+
+@import "utilities/grid";
+@import "utilities/display";
+@import "utilities/flex";

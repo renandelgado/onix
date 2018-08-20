@@ -12,6 +12,12 @@
 			<div class="container-fluid">
 				<?php onix_header_image(); ?>
 				<?php get_template_part('template-parts/navigation/navigation'); ?>
+				<div class="row paper-flow">
+					<div class="col-md-6 info-paper">
+						<h1>Desenvolvimento web de alta performance</h1>
+						<p>Faça a sua empresa crescer na web com o site ceto para o seu público alvo, com um hambiente robusto e intuitivo para facilitar o aprendizado, você vai poder gerar conteúdo mais facilmente. Tudo isso mesclando integrações com ferramentas importantes para facilitar o seu entendimento das necesidades dos seus clientes</p>
+						<a href="#">Para saber mais clique aqui</a>
+					</div>
+				</div>
 			</div>
 		</header>
-		
