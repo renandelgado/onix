@@ -19,6 +19,6 @@
 		<header role="banner" class="main-header">
 			<div class="container-fluid">
 				<?php onix_header_image(); ?>
-				<?php get_template_part('template-parts/navigation/navigation'); ?>
+				<?php get_template_part('template-parts/navigation'); ?>
 			</div>
 		</header>

@@ -3,9 +3,10 @@
 				<div class="row">
 					<div class="col-md-8">
 						<?php 
-		      				while ( have_posts() ) : the_post();
+		      				while ( have_posts() ){
+		      					the_post();
 		        				the_content();
-		      				endwhile;
+		        			}
 		     			?>
 					</div>
 					<div class="col-md-4">

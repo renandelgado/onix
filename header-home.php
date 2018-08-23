@@ -19,7 +19,7 @@
 		<header role="banner" class="main-header">
 			<div class="container-fluid">
 				<?php onix_header_image(); ?>
-				<?php get_template_part('template-parts/navigation/navigation'); ?>
+				<?php get_template_part('template-parts/navigation'); ?>
 				<div class="row paper-flow">
 					<div class="col-md-5 info-paper">
 						<h1>Desenvolvimento web feito com profissionalismo e dedicação</h1>

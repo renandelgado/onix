@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="UTF-8"/>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 		<link rel = "shortcut icon" href = "<?php bloginfo('template_url'); ?>/favicon.ico" />
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/lib.min.css"/>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/header-pages.min.css"/>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/main-content.min.css"/>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/main-footer.min.css"/>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php get_body_class(); ?>>
 		<header role="banner" class="main-header">
-			<div class="container-fluid header-home">
-				<div class="row primary-line">					
-					<nav class="primary-navbar" role="main-navigation">
-						<a href="#"><img src="<?php bloginfo('template_url'); ?>/assets/svg/renan-cog.svg"></a>
-						<ul class="main-links">
-							<li><a href="#">Página inicial</a></li>
-							<li><a href="#">Métodos</a></li>
-							<li><a href="#">Portfólio</a></li>
-							<li><a href="#">Blog oficial</a></li>
-							<li><a href="#">Contato</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="row title-page">
-					<div class="col-lg-5">
-						<h1><?php the_title( '<h1>', '</h1>' ); ?></h1>
-					</div>
-				</div>
+			<div class="container-fluid">
+				<?php onix_header_image(); ?>
+				<?php get_template_part('template-parts/navigation'); ?>
 			</div>
 		</header>

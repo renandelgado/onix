@@ -2,17 +2,63 @@ footer.footer-footer{
 	div.main-footer{
 		background-color: #272727;
 		width: 100%;
-		height: 400px;
+		height: 430px;
 		clear: both;
 		z-index: 60;
+		border-top: 6px solid #13A2dF;
 		div.navbar-up{
 			width: 100%;
-			height: 374px;
+			height: 360px;
+			padding-top: 20px;
+			margin-bottom: 20px;
+			div.section-navbar-left{
+				border-right: 1px solid #E2E2E2;
+				h3{
+					color: #fff;
+					font-size: 16pt;
+				}
+			}
+			div.section-navbar-middle{
+				border-right: 1px solid #E2E2E2;
+				h3{
+					color: #fff;
+					font-size: 16pt;
+				}
+			}
+			div.brand-footer-links{
+				a.logo-image, img{
+					padding-left: 16%;
+					padding-top: 80px;
+				}
+				h4{
+					color: #13A2dF;
+					font-size: 16pt;
+					text-align: center;
+					padding-top: 20px;
+				}
+				ul{
+					padding-top: 30px;
+					li{
+						display: inline-block;
+						padding-left: 9%;
+						a, i{
+							color: #fff;
+							font-size: 24pt;
+							transition: .1s;
+							&:hover{
+								color: #DC0145;
+							}
+						}
+					}
+				}
+			}
 		}
 		div.copyright{
 			width: 100%;
 			height: 26px;
 			padding-left: 31%;
+			padding-top:12px;
+			border-top: 1px solid #E2E2E2;
 			h4{
 				color: #fff;
 				font-size: 16pt;

@@ -89,37 +89,42 @@ function onix_nav_menu_header(){
 		wp_nav_menu(array(
 			'theme_location' => 'primary',
 			'depth' => 1,
-			'container_class' => 'navbar-header',
+			'container_class' => 'col-md-10 navbar-header',
 			'fallback_cb' => false,
 		));
 	}
 }
+
+function onix_nav_menu_footer_left(){
+	if (has_nav_menu('footer_left')) {
+		wp_nav_menu(array(
+			'theme_location' => 'footer_left',
+			'depth' => 1,
+			'container' => 'nav',
+			'container_class' => 'navbar navbar-expand-md navbar-footer-left',
+			'fallback_cb' => false,
+		));
+	}
+}
+
+function onix_nav_menu_footer_middle(){
+	if (has_nav_menu('footer_middle')) {
+		wp_nav_menu(array(
+			'theme_location' => 'footer_middle',
+			'depth' => 1,
+			'container' => 'nav',
+			'container_class' => 'navbar navbar-expand-md navbar-footer-middle',
+			'fallback_cb' => false,
+		));
+	}
+}
+
 function onix_nav_menu_category(){
 	if (has_nav_menu('category')) {
 		wp_nav_menu(array(
 			'theme_location' => 'category',
 			'depth' => 1,
 			'container_class' => 'navbar-category',
-			'fallback_cb' => false,
-		));
-	}
-}
-function onix_nav_menu_footer_left(){
-	if (has_nav_menu('footer_left')) {
-		wp_nav_menu(array(
-			'theme_location' => 'footer_left',
-			'depth' => 1,
-			'container_class' => 'navbar-footer-left',
-			'fallback_cb' => false,
-		));
-	}
-}
-function onix_nav_menu_footer_middle(){
-	if (has_nav_menu('footer_middle')) {
-		wp_nav_menu(array(
-			'theme_location' => 'footer_middle',
-			'depth' => 1,
-			'container_class' => 'navbar-footer-middle',
 			'fallback_cb' => false,
 		));
 	}
