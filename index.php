@@ -1,11 +1,7 @@
 <?php get_header('home'); ?>
-		<main>
+		<main class="write">
 			<div class="container-fluid">
-				<?php 
-		      		while ( have_posts() ) : the_post();
-		        		the_content();
-		      		endwhile;
-		     	?>
+				<?php get_template_part('template-parts/content', 'home'); ?>
 			</div>
 		</main>
 <?php get_footer(); ?>

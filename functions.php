@@ -4,7 +4,7 @@ add_theme_support ('title-tag');
 //Adiciona imagem de cabeçalho automaticamente
 //
 add_theme_support ('custom-header', array(
-	'default-image' => get_template_directory_uri(). '/assets/imagens/programmer-bck.jpg',
+	'default-image' => get_template_directory_uri(). '/assets/imagens/background-globo-terrestre.jpg',
 	'width' => '1200',
 	'height' => '600',
 	'flex-width' => true,
@@ -17,7 +17,17 @@ add_theme_support ('custom-header', array(
 //
 function onix_header_image(){
 	if (has_header_image()) { ?>
-		<img src="<?php header_image(); ?>" alt="Imagem de cabeçalho"/><?php
+		<style>
+		header.main-header div.container-fluid{
+		background-image: url(<?php header_image(); ?>);
+		background-repeat: no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		}			
+		</style>
+		<?php
 	} else{ ?>
 		<style>body header.main-header{backgroud-color: #19B7E3; background-size: cover; webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; }</style><?php
 	}
@@ -53,8 +63,8 @@ function register_name_site(){
 //
 function onix_custom_logo_type() {
 	$site_name = ('title-tag');
-	if ( has_custom_logo() ) { ?>
-	    <img src="<?php the_custom_logo(); ?>" alt="Logotipo oficial"/><?php
+	if (has_custom_logo()) { ?>
+	    <?php the_custom_logo()?><?php
 	} else {?>
 	    <h1>Site criado por Renan Delgado</h1><?php
 	}
@@ -114,20 +124,3 @@ function onix_nav_menu_footer_middle(){
 		));
 	}
 }
-
-function onix_stylesheets(){
-	wp_enqueue_style('onix-grid', get_template_directory_uri(). '/assets/css/onix-grid.min.css');
-	if (is_page_template('homepage' && 'index')) {
-		wp_enqueue_style('main-header', get_template_directory_uri(). '/assets/css/main-header.min.css');
-		wp_enqueue_style('main-body', get_template_directory_uri(). '/assets/css/main-content.min.css');
-		wp_enqueue_style('main-footer', get_template_directory_uri(). '/assets/css/main-footer.min.css');
-	}elseif (is_page()) {
-		wp_enqueue_style('page-headers', get_template_directory_uri(). '/assets/css/header-pages.min.css');
-		wp_enqueue_style('main-body', get_template_directory_uri(). '/assets/css/main-content.min.css');
-		wp_enqueue_style('main-footer', get_template_directory_uri(). '/assets/css/main-footer.min.css');
-	}else{
-
-	}
-}
-
-add_action('init', 'onix_stylesheets');

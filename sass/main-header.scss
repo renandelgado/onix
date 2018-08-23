@@ -1,0 +1,25 @@
+@import "utilities/navbars";
+
+header.main-header{
+	width: 100%;
+	height: 500px;
+
+	z-index: 0;
+	div.container-fluid{
+		height: 500px;
+		div.paper-flow{
+			position: relative;
+			top: 190px;
+			div.info-paper{
+				text-align: center;
+				background-color: #0DA7D1;
+				margin-left: 28.4%;
+				h1{
+					color: #fff;
+					font-size: 24pt;
+				}
+			}
+		}
+	}
+}
+
